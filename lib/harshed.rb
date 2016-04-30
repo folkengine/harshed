@@ -5,7 +5,7 @@ require 'yamlable'
 class Harshed
   include Yamlable
 
-  VERSION = "0.1.0".freeze
+  VERSION = '0.1.0'.freeze
 
   attr_reader :hash, :key_to_map
 
@@ -40,7 +40,7 @@ class Harshed
   def validate_type(item)
     return if @hash.empty?
     unless valid_type?(item)
-      raise TypeError.new("Harshed Object class types (#{last_class}/#{item_class}) must be the same.")
+      raise TypeError "Harshed Object class types (#{last_class}/#{item_class}) must be the same."
     end
   end
 
@@ -67,6 +67,7 @@ class Harshed
     end
   end
 
+  # This method smells of :reek:NestedIterators
   def store_to_disk
     mkdir
     @hash.each do |key, value|

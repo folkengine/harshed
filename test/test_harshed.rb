@@ -2,15 +2,17 @@ require 'faker'
 require 'minitest/autorun'
 require 'minitest/reporters'
 require 'minitest/unit'
-require 'harshed'
+require 'Harshed'
 
 Minitest::Reporters.use!
 
 class TestHashed < Minitest::Test
+  include Harshed
+  
   def setup
     @widget1 = Widget.test_factory
     @widget2 = Widget.test_factory
-    @hashed = Harshed.new(:ean, [@widget1, @widget2])
+    @hashed = Harsh.new(:ean, [@widget1, @widget2])
   end
 
   def test_store_to_disk
@@ -28,13 +30,13 @@ class TestHashed < Minitest::Test
   end
 
   def test_example
-    @heroes = Harshed.new(:character_name, storage_folder: 'characters')
+    @heroes = Harsh.new(:character_name, storage_folder: 'characters')
     sir_fumblealot = Character.new('SirFumbleAlot')
     stinky = Character.new('StinkyTheBeggar')
     @heroes.store([sir_fumblealot, stinky])
     @heroes.to_disk
 
-    @heroes_reborn = Harshed.new(:character_name, storage_folder: 'characters').from_disk
+    @heroes_reborn = Harsh.new(:character_name, storage_folder: 'characters').from_disk
     @heroes.rm_r
   end
 end

@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Harshed::VERSION
   spec.authors       = ['Folkengine']
   spec.email         = ['gaoler@electronicpanopticon.com']
+  spec.license       = 'MIT'
 
   spec.summary       = 'Ruby Serializable Hashed Array Utility'
   spec.description   = ''
@@ -15,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'yamlable'
+  spec.add_runtime_dependency 'yamlable'
   spec.add_development_dependency 'bundler', '~> 1.11'
   spec.add_development_dependency 'rake', '~> 10.0'
 end

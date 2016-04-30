@@ -10,7 +10,8 @@ Take a collection of same type objects. Pick a pivot point, aka, a field unique 
 for the hash. 
 
 I wrote this module to support development/testing techniques that I've grown use to. As a developer I am squarely in the 
-[classical, anti-mockist camp](https://agilewarrior.wordpress.com/2015/04/18/classical-vs-mockist-testing/). Harshed helps with that.
+[classical, anti-mockist camp](https://agilewarrior.wordpress.com/2015/04/18/classical-vs-mockist-testing/). Harshed helps with that. 
+You can an early version of Harshed in action over @ my [DX-EverCraft repo](https://github.com/folkengine/dx_evercraft).
 
 Eventually, I'd like to update this module to support the following features:
 

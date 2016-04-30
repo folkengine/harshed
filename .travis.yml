@@ -3,3 +3,9 @@ rvm:
  - "2.1.5"
  - "2.2.0"
  - "2.3.0"
+before_install:
+  - gem install bundler
+install:
+  - bundle install
+script:
+  - bundle exec rake boom

@@ -1,5 +1,8 @@
 # Harshed
 
+[![Gem Version](https://badge.fury.io/rb/harshed.svg)](https://badge.fury.io/rb/harshed)
+[![Build Status](https://travis-ci.org/folkengine/harshed.svg?branch=master)](https://travis-ci.org/folkengine/harshed)
+
 Ruby Serializable Hashed Array Utility
 
 ## Installation

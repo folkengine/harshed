@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'yamlable'
-
 # Specify your gem's dependencies in harshed.gemspec
 gemspec
+
+gem 'yamlable'
 
 group :development do
   gem 'minitest'

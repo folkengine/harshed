@@ -2,7 +2,7 @@ require 'faker'
 require 'minitest/autorun'
 require 'minitest/reporters'
 require 'minitest/unit'
-require 'Harshed'
+require 'harshed'
 
 Minitest::Reporters.use!
 

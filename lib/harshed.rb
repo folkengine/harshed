@@ -5,7 +5,7 @@ require 'yamlable'
 class Harshed
   include Yamlable
 
-  VERSION = '0.1.0'.freeze
+  VERSION = '0.1.1'.freeze
 
   attr_reader :hash, :key_to_map
 

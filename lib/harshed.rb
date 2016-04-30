@@ -60,15 +60,16 @@ class Harshed
     @hash.values.sample
   end
 
-  def retrieve_from_disk
+  def from_disk
     Dir["#{folder_path}/*.yml"].each do |filename|
       yml = File.read(filename)
       store(Psych.load(yml, filename))
     end
+    self
   end
 
   # This method smells of :reek:NestedIterators
-  def store_to_disk
+  def to_disk
     mkdir
     @hash.each do |key, value|
       File.open(filename(key), 'w') { |file| file.write(value.to_yaml) }

@@ -12,7 +12,6 @@ for the hash.
 I wrote this module to support development/testing techniques that I've grown use to. As a developer I am squarely in the 
 [classical, anti-mockist camp](https://agilewarrior.wordpress.com/2015/04/18/classical-vs-mockist-testing/). Harshed helps with that.
 
-
 Eventually, I'd like to update this module to support the following features:
 
 1. Support for JSON
@@ -62,13 +61,14 @@ Or install it yourself as:
       
       @heroes.to_disk
       
-      @heroes_reborn = Harshed.new(:character_name, storage_folder: 'characters').from_disk
+      @heroes_reborn = Harshed.new(:character_name, storage_folder: 'characters')
+                           .from_disk
                  
 ## Development
 
-To run tests, Reek, and RubyCop:
+To run tests:
 
-    $> rake boom 
+    $> rake 
 
 ## Contributing
 

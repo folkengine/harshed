@@ -53,7 +53,7 @@ Or install it yourself as:
         end
       end
       
-      @heroes = Harshed.new(:character_name, storage_folder: 'characters')
+      @heroes = Harshed::Harsh.new(:character_name, storage_folder: 'characters')
       
       sir_fumblealot = Character.new('SirFumbleAlot')
       stinky = Character.new('StinkyTheBeggar')
@@ -62,7 +62,7 @@ Or install it yourself as:
       
       @heroes.to_disk
       
-      @heroes_reborn = Harshed.new(:character_name, storage_folder: 'characters')
+      @heroes_reborn = Harshed::Harsh.new(:character_name, storage_folder: 'characters')
                            .from_disk
                  
 ## Development

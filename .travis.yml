@@ -8,4 +8,4 @@ before_install:
 install:
   - bundle install
 script:
-  - bundle exec rake boom
+  - bundle exec rake build
